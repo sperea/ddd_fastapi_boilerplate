@@ -1,10 +1,7 @@
-Claro, Sergio. Aquí tienes un `README.md` bien estructurado y claro, adaptado a tu proyecto con **FastAPI**, **Clean Architecture**, **DDD**, **SQLModel**, **JWT (en caso de añadirlo)**, y **logging con rotación**.
-
----
 
 ## 📄 `README.md`
 
-```markdown
+
 # 🧱 FastAPI Clean Architecture Starter
 
 Este proyecto es una plantilla inicial para crear APIs REST en Python con FastAPI, basada en **Clean Architecture** y **Domain-Driven Design (DDD)**. Utiliza **SQLModel** como ORM, soporta logs estructurados a consola y archivo, y está preparada para extensiones como autenticación JWT, FastAPI-Admin y observabilidad avanzada.
@@ -13,8 +10,7 @@ Este proyecto es una plantilla inicial para crear APIs REST en Python con FastAP
 
 ## 🗂 Estructura del Proyecto
 
-```
-my_project/
+backend/
 ├── app/                      # Dominio, interfaces y lógica de negocio
 │   ├── domain/               # Modelos del dominio (SQLModel)
 │   ├── interfaces/           # Puertos / interfaces
@@ -106,4 +102,3 @@ MIT
 
 ---
 
-¿Quieres que este `README.md` también se cree automáticamente con el script de bootstrap del proyecto?
