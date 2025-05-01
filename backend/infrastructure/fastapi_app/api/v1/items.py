@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlmodel import Session
 from infrastructure.database import get_session
-from backend.infrastructure.orm.sqlmodel_repo import SQLModelItemRepository
+from infrastructure.orm.sqlmodel_repo import SQLModelItemRepository
 from app.use_cases.operations import list_items
 
 router = APIRouter()

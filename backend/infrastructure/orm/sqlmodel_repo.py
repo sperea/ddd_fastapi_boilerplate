@@ -2,7 +2,6 @@ from sqlmodel import Session, select
 from typing import List
 from app.domain.models import Item, ItemDomain
 from app.interfaces.repositories import ItemRepository
-from app.infrastructure.database import Item
 
 class SQLModelItemRepository(ItemRepository):
     def __init__(self, session: Session):
