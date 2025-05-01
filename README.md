@@ -10,6 +10,7 @@ Este proyecto es una plantilla inicial para crear APIs REST en Python con FastAP
 
 ## 🗂 Estructura del Proyecto
 
+```bash
 backend/
 ├── app/                      # Dominio, interfaces y lógica de negocio
 │   ├── domain/               # Modelos del dominio (SQLModel)
