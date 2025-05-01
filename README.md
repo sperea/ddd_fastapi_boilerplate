@@ -99,7 +99,6 @@ pytest tests/
 ## 📄 Licencia
 
 MIT
-```
 
 ---
 
