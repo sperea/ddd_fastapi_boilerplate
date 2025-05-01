@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+sqlmodel
+sqlalchemy
+fastapi-admin
+aiosqlite
+python-jose[cryptography]
+passlib[bcrypt]

@@ -1,0 +1,49 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.env
+
+# Logs
+logs/
+*.log
+
+# SQLite database
+db.sqlite3
+
+# Docker
+docker-compose.override.yml
+
+# VS Code
+.vscode/
+
+# Pytest
+.cache/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# MyPy
+.mypy_cache/
+
+# Pyre
+.pyre/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Git
+*.swp
+*.swo
+.idea/
