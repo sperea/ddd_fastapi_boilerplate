@@ -1,4 +1,3 @@
-
 ## 📄 `README.md`
 
 
@@ -77,11 +76,65 @@ Documentación automática en: [http://localhost:8000/docs](http://localhost:800
 
 ## 🧪 Pruebas
 
-*(por añadir)*: Puedes colocar tus tests en la carpeta `tests/` y usar `pytest`:
+El proyecto incluye una suite completa de tests organizados por niveles siguiendo las mejores prácticas para arquitecturas limpias:
+
+### Estructura de Tests
+
+```
+tests/
+├── conftest.py                # Configuración y fixtures de pytest
+├── unit/                      # Tests unitarios
+│   ├── domain/                # Tests de modelos de dominio
+│   └── use_cases/             # Tests de casos de uso
+├── integration/               # Tests de integración
+│   └── test_auth_api.py       # Tests de la API de autenticación
+└── e2e/                       # Tests End-to-End
+    └── test_auth_flow.py      # Flujos completos de autenticación
+```
+
+### Ejecución de Tests
+
+Para ejecutar todos los tests:
 
 ```bash
-pip install pytest
-pytest tests/
+# Desde la raíz del proyecto
+cd backend
+pytest
+```
+
+Para ejecutar tests específicos:
+
+```bash
+# Tests unitarios
+pytest tests/unit/
+
+# Tests de integración
+pytest tests/integration/
+
+# Tests end-to-end
+pytest tests/e2e/
+
+# Tests específicos por nombre
+pytest tests/ -k "login"
+
+# Con más detalle y reporte de cobertura
+pytest tests/ -v --cov=app --cov=infrastructure
+```
+
+### Requisitos para Testing
+
+Instala las dependencias de desarrollo:
+
+```bash
+pip install pytest pytest-cov
+```
+
+### Docker
+
+Si utilizas Docker, puedes ejecutar los tests dentro del contenedor:
+
+```bash
+docker compose run --rm web pytest
 ```
 
 ---

@@ -20,6 +20,13 @@ async def register(
     Registra un nuevo usuario en el sistema
     """
     try:
+        # Verificar si el usuario ya existe antes de intentar registrarlo
+        if auth_service.user_repository.find_by_username(user_data.username):
+            raise UserAlreadyExistsError(f"El usuario {user_data.username} ya existe")
+        
+        if auth_service.user_repository.find_by_email(user_data.email):
+            raise UserAlreadyExistsError(f"El email {user_data.email} ya está registrado")
+
         user = auth_service.register_user(
             username=user_data.username,
             email=user_data.email,
