@@ -6,3 +6,7 @@ fastapi-admin
 aiosqlite
 python-jose[cryptography]
 passlib[bcrypt]
+bcrypt
+python-multipart
+email-validator
+pyjwt
