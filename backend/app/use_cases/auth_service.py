@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, UTC
 from typing import Optional, Dict, Any
 import jwt
 
@@ -84,7 +84,7 @@ class AuthService:
             "id": user_domain.id,
             "email": user_domain.email,
             "roles": user_domain.roles,
-            "exp": datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+            "exp": datetime.now(UTC) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
         }
         
         # Crear token

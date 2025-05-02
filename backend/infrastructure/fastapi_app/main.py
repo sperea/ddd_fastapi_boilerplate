@@ -1,12 +1,23 @@
+import contextlib
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from infrastructure.database import init_db
 from infrastructure.fastapi_app.api.v1 import auth, users
+from contextlib import asynccontextmanager
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Código de inicialización: se ejecuta antes de iniciar la aplicación
+    init_db()
+    yield
+    # Código de limpieza: se ejecuta al cerrar la aplicación
+    pass
 
 app = FastAPI(
     title="Clean Architecture FastAPI",
     description="Una API basada en FastAPI con arquitectura limpia y DDD",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # Routers
@@ -193,7 +204,3 @@ async def get_api_info():
     </html>
     """
     return html_content
-
-@app.on_event("startup")
-def on_startup():
-    init_db()
